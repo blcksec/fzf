@@ -151,8 +151,8 @@ fzf-tmux -p 80%,60%
 > You might also want to check out my tmux plugins which support this popup
 > window layout.
 >
-> - https://github.com/junegunn/tmux-fzf-url
-> - https://github.com/junegunn/tmux-fzf-maccy
+> - https://github.com/blcksec/tmux-fzf-url
+> - https://github.com/blcksec/tmux-fzf-maccy
 
 Dynamic reloading of the list
 -----------------------------
@@ -161,7 +161,7 @@ fzf can dynamically update the candidate list using an arbitrary program with
 `reload` bindings (The design document for `reload` can be found
 [here][reload]).
 
-[reload]: https://github.com/junegunn/fzf/issues/1750
+[reload]: https://github.com/blcksec/fzf/issues/1750
 
 ### Updating the list of processes by pressing CTRL-R
 
@@ -269,7 +269,7 @@ I know it's a lot to digest, let's try to break down the code.
   man/man1/fzf.1:54:.BI "--algo=" TYPE
   man/man1/fzf.1:55:Fuzzy matching algorithm (default: v2)
   man/man1/fzf.1:58:.BR v2 "     Optimal scoring algorithm (quality)"
-  src/pattern_test.go:7:  "github.com/junegunn/fzf/src/algo"
+  src/pattern_test.go:7:  "github.com/blcksec/fzf/src/algo"
   ```
   The first token delimited by `:` is the file path, and the second token is
   the line number of the matching line. They respectively correspond to `{1}`
@@ -504,7 +504,7 @@ git checkout [SOME_COMMIT_HASH or BRANCH or TAG]
 git diff [SOME_COMMIT_HASH or BRANCH or TAG] [SOME_COMMIT_HASH or BRANCH or TAG]
 ```
 
-[fzf-git.sh](https://github.com/junegunn/fzf-git.sh) project defines a set of
+[fzf-git.sh](https://github.com/blcksec/fzf-git.sh) project defines a set of
 fzf-based key bindings for Git objects. I strongly recommend that you check
 them out because they are seriously useful.
 
@@ -534,14 +534,14 @@ are a few color themes. Note that you need a terminal emulator that can
 display 24-bit colors.
 
 ```sh
-# junegunn/seoul256.vim (dark)
+# blcksec/seoul256.vim (dark)
 export FZF_DEFAULT_OPTS='--color=bg+:#3F3F3F,bg:#4B4B4B,border:#6B6B6B,spinner:#98BC99,hl:#719872,fg:#D9D9D9,header:#719872,info:#BDBB72,pointer:#E12672,marker:#E17899,fg+:#D9D9D9,preview-bg:#3F3F3F,prompt:#98BEDE,hl+:#98BC99'
 ```
 
 ![seoul256](https://user-images.githubusercontent.com/700826/113475011-2c192d80-94ae-11eb-9d17-1e5867bae01f.png)
 
 ```sh
-# junegunn/seoul256.vim (light)
+# blcksec/seoul256.vim (light)
 export FZF_DEFAULT_OPTS='--color=bg+:#D9D9D9,bg:#E1E1E1,border:#C8C8C8,spinner:#719899,hl:#719872,fg:#616161,header:#719872,info:#727100,pointer:#E12672,marker:#E17899,fg+:#616161,preview-bg:#D9D9D9,prompt:#0099BD,hl+:#719899'
 ```
 
@@ -572,7 +572,7 @@ export FZF_DEFAULT_OPTS='--color=bg+:#293739,bg:#1B1D1E,border:#808080,spinner:#
 
 The Vim plugin of fzf can generate `--color` option from the current color
 scheme according to `g:fzf_colors` variable. You can find the detailed
-explanation [here](https://github.com/junegunn/fzf/blob/master/README-VIM.md#explanation-of-gfzf_colors).
+explanation [here](https://github.com/blcksec/fzf/blob/master/README-VIM.md#explanation-of-gfzf_colors).
 
 Here is an example. Add this to your Vim configuration file.
 

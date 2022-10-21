@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/junegunn/fzf/src/algo"
-	"github.com/junegunn/fzf/src/util"
+	"github.com/blcksec/fzf/src/algo"
+	"github.com/blcksec/fzf/src/util"
 )
 
 var slab *util.Slab
@@ -130,27 +130,27 @@ func TestCaseSensitivity(t *testing.T) {
 
 func TestOrigTextAndTransformed(t *testing.T) {
 	pattern := BuildPattern(true, algo.FuzzyMatchV2, true, CaseSmart, false, true, false, true, []Range{}, Delimiter{}, []rune("jg"))
-	tokens := Tokenize("junegunn", Delimiter{})
+	tokens := Tokenize("blcksec", Delimiter{})
 	trans := Transform(tokens, []Range{{1, 1}})
 
-	origBytes := []byte("junegunn.choi")
+	origBytes := []byte("blcksec.choi")
 	for _, extended := range []bool{false, true} {
 		chunk := Chunk{count: 1}
 		chunk.items[0] = Item{
-			text:        util.ToChars([]byte("junegunn")),
+			text:        util.ToChars([]byte("blcksec")),
 			origText:    &origBytes,
 			transformed: &trans}
 		pattern.extended = extended
 		matches := pattern.matchChunk(&chunk, nil, slab) // No cache
-		if !(matches[0].item.text.ToString() == "junegunn" &&
-			string(*matches[0].item.origText) == "junegunn.choi" &&
+		if !(matches[0].item.text.ToString() == "blcksec" &&
+			string(*matches[0].item.origText) == "blcksec.choi" &&
 			reflect.DeepEqual(*matches[0].item.transformed, trans)) {
 			t.Error("Invalid match result", matches)
 		}
 
 		match, offsets, pos := pattern.MatchItem(&chunk.items[0], true, slab)
-		if !(match.item.text.ToString() == "junegunn" &&
-			string(*match.item.origText) == "junegunn.choi" &&
+		if !(match.item.text.ToString() == "blcksec" &&
+			string(*match.item.origText) == "blcksec.choi" &&
 			offsets[0][0] == 0 && offsets[0][1] == 5 &&
 			reflect.DeepEqual(*match.item.transformed, trans)) {
 			t.Error("Invalid match result", match, offsets, extended)

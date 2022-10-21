@@ -204,7 +204,7 @@ CHANGELOG
 ------
 - Added `unbind` action. In the following Ripgrep launcher example, you can
   use `unbind(reload)` to switch to fzf-only filtering mode.
-    - See https://github.com/junegunn/fzf/blob/master/ADVANCED.md#switching-to-fzf-only-search-mode
+    - See https://github.com/blcksec/fzf/blob/master/ADVANCED.md#switching-to-fzf-only-search-mode
 - Vim plugin
     - Vim plugin will stop immediately even when the source command hasn't finished
       ```vim
@@ -235,7 +235,7 @@ CHANGELOG
   ```
 - Bug fixes and improvements
 - Signed and notarized macOS binaries
-  (Huge thanks to [BACKERS.md](https://github.com/junegunn/junegunn/blob/main/BACKERS.md)!)
+  (Huge thanks to [BACKERS.md](https://github.com/blcksec/blcksec/blob/main/BACKERS.md)!)
 
 0.26.0
 ------
@@ -398,7 +398,7 @@ CHANGELOG
   seq 100 | fzf --multi 5
     # 100/100 (0/5)
   ```
-- Since 0.24.0, release binaries will be uploaded to https://github.com/junegunn/fzf/releases
+- Since 0.24.0, release binaries will be uploaded to https://github.com/blcksec/fzf/releases
 
 0.23.1
 ------
@@ -586,7 +586,7 @@ CHANGELOG
 - Added `--phony` option which completely disables search functionality.
   Useful when you want to use fzf only as a selector interface. See below.
 - Added "reload" action for dynamically updating the input list without
-  restarting fzf. See https://github.com/junegunn/fzf/issues/1750 to learn
+  restarting fzf. See https://github.com/blcksec/fzf/issues/1750 to learn
   more about it.
   ```sh
   # Using fzf as the selector interface for ripgrep
@@ -629,7 +629,7 @@ CHANGELOG
 - When you transform the input with `--with-nth`, the trailing white spaces
   are removed.
 - `ctrl-\`, `ctrl-]`, `ctrl-^`, and `ctrl-/` can now be used with `--bind`
-- See https://github.com/junegunn/fzf/milestone/15?closed=1 for more details
+- See https://github.com/blcksec/fzf/milestone/15?closed=1 for more details
 
 [argmax]: https://unix.stackexchange.com/questions/120642/what-defines-the-maximum-size-for-a-command-single-argument
 
@@ -645,14 +645,14 @@ CHANGELOG
     - fzf still overrides `LINES` and `COLUMNS` as before, but they may be
       reset by the default shell.
 - Bug fixes and improvements
-    - See https://github.com/junegunn/fzf/milestone/14?closed=1
+    - See https://github.com/blcksec/fzf/milestone/14?closed=1
 - Built with Go 1.12.1
 
 0.17.5
 ------
 
 - Bug fixes and improvements
-    - See https://github.com/junegunn/fzf/milestone/13?closed=1
+    - See https://github.com/blcksec/fzf/milestone/13?closed=1
 - Search query longer than the screen width is allowed (up to 300 chars)
 - Built with Go 1.11.1
 
@@ -673,7 +673,7 @@ CHANGELOG
 - install and uninstall scripts now supports generating files under
   `XDG_CONFIG_HOME` on `--xdg` flag.
 
-See https://github.com/junegunn/fzf/milestone/12?closed=1 for the full list of
+See https://github.com/blcksec/fzf/milestone/12?closed=1 for the full list of
 changes.
 
 0.17.3
@@ -837,7 +837,7 @@ A maintenance release for auxiliary scripts. fzf binaries are not updated.
         - Supports italics
     - *tcell*
         - 24-bit color support
-    - See https://github.com/junegunn/fzf/blob/master/BUILD.md
+    - See https://github.com/blcksec/fzf/blob/master/BUILD.md
 
 0.15.8
 ------
@@ -981,8 +981,8 @@ A maintenance release for auxiliary scripts. fzf binaries are not updated.
 - Graceful exit on SIGTERM (#482)
 - `$SHELL` instead of `sh` for `execute` action and `$FZF_DEFAULT_COMMAND` (#481)
 - Changes in fuzzy completion API
-    - [`_fzf_compgen_{path,dir}`](https://github.com/junegunn/fzf/commit/9617647)
-    - [`_fzf_complete_COMMAND_post`](https://github.com/junegunn/fzf/commit/8206746)
+    - [`_fzf_compgen_{path,dir}`](https://github.com/blcksec/fzf/commit/9617647)
+    - [`_fzf_complete_COMMAND_post`](https://github.com/blcksec/fzf/commit/8206746)
       for post-processing
 
 0.11.2

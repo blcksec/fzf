@@ -46,7 +46,7 @@ If you use {vim-plug}{1}, the same can be written as:
 But if you want the latest Vim plugin file from GitHub rather than the one
 included in the package, write:
 >
-    Plug 'junegunn/fzf'
+    Plug 'blcksec/fzf'
 <
 The Vim plugin will pick up fzf binary available on the system. If fzf is not
 found on `$PATH`, it will ask you if it should download the latest binary for
@@ -57,9 +57,9 @@ post-update hook like so:
 
                                                                    *fzf#install*
 >
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'blcksec/fzf', { 'do': { -> fzf#install() } }
 <
-                                      {1} https://github.com/junegunn/vim-plug
+                                      {1} https://github.com/blcksec/vim-plug
 
 
 SUMMARY                                                            *fzf-summary*
@@ -86,7 +86,7 @@ the basic file selector command built on top of them.
 The most important of all is `fzf#run`, but it would be easier to understand
 the whole if we start off with `:FZF` command.
 
-                                       {2} https://github.com/junegunn/fzf.vim
+                                       {2} https://github.com/blcksec/fzf.vim
 
 
 :FZF[!]
@@ -506,7 +506,7 @@ LICENSE                                                            *fzf-license*
 
 The MIT License (MIT)
 
-Copyright (c) 2013-2021 Junegunn Choi
+Copyright (c) 2013-2021 blcksec Choi
 
 ==============================================================================
 vim:tw=78:sw=2:ts=2:ft=help:norl:nowrap:

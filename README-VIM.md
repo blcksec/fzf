@@ -16,7 +16,7 @@ set rtp+=/usr/local/opt/fzf
 set rtp+=~/.fzf
 ```
 
-If you use [vim-plug](https://github.com/junegunn/vim-plug), the same can be
+If you use [vim-plug](https://github.com/blcksec/vim-plug), the same can be
 written as:
 
 ```vim
@@ -31,7 +31,7 @@ But if you want the latest Vim plugin file from GitHub rather than the one
 included in the package, write:
 
 ```vim
-Plug 'junegunn/fzf'
+Plug 'blcksec/fzf'
 ```
 
 The Vim plugin will pick up fzf binary available on the system. If fzf is not
@@ -42,7 +42,7 @@ To make sure that you have the latest version of the binary, set up
 post-update hook like so:
 
 ```vim
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'blcksec/fzf', { 'do': { -> fzf#install() } }
 ```
 
 Summary
@@ -64,7 +64,7 @@ the basic file selector command built on top of them.
     - Basic fuzzy file selector
     - A reference implementation for those who don't want to write VimScript
       to implement custom commands
-    - If you're looking for more such commands, check out [fzf.vim](https://github.com/junegunn/fzf.vim) project.
+    - If you're looking for more such commands, check out [fzf.vim](https://github.com/blcksec/fzf.vim) project.
 
 The most important of all is `fzf#run`, but it would be easier to understand
 the whole if we start off with `:FZF` command.
@@ -483,4 +483,4 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 
 The MIT License (MIT)
 
-Copyright (c) 2013-2021 Junegunn Choi
+Copyright (c) 2013-2021 blcksec Choi

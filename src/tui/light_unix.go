@@ -9,7 +9,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/blcksec/fzf/src/util"
 	"golang.org/x/term"
 )
 
